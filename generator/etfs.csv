@@ -1,0 +1,88 @@
+symbol,name,category,expense_ratio
+SPY,SPDR S&P 500 ETF,Large Cap Growth Equities,0.0009
+IVV,iShares Core S&P 500 ETF,Large Cap Growth Equities,0.0004
+VOO,Vanguard S&P 500 ETF,Large Cap Growth Equities,0.0003
+VTI,Vanguard Total Stock Market ETF,Large Cap Growth Equities,0.0003
+QQQ,Invesco QQQ,Large Cap Growth Equities,0.0020
+AGG,iShares Core U.S. Aggregate Bond ETF,Total Bond Market,0.0005
+VEA,Vanguard FTSE Developed Markets ETF,Foreign Large Cap Equities,0.0005
+IEFA,iShares Core MSCI EAFE ETF,Foreign Large Cap Equities,0.0007
+GLD,SPDR Gold Trust,Precious Metals,0.0040
+BND,Vanguard Total Bond Market ETF,Total Bond Market,0.0004
+VWO,Vanguard FTSE Emerging Markets ETF,Emerging Markets Equities,0.0012
+IWF,iShares Russell 1000 Growth ETF,Large Cap Growth Equities,0.0019
+VUG,Vanguard Growth ETF,Large Cap Growth Equities,0.0004
+VTV,Vanguard Value ETF,Large Cap Blend Equities,0.0004
+LQD,iShares iBoxx $ Investment Grade Corporate Bond ETF,Corporate Bonds,0.0015
+IEMG,iShares Core MSCI Emerging Markets ETF,Asia Pacific Equities,0.0014
+EFA,iShares MSCI EAFE ETF,Foreign Large Cap Equities,0.0032
+VIG,Vanguard Dividend Appreciation ETF,Large Cap Growth Equities,0.0006
+IJH,iShares Core S&P Mid-Cap ETF,Small Cap Growth Equities,0.0006
+IJR,iShares Core S&P Small-Cap ETF,Small Cap Growth Equities,0.0007
+IWD,iShares Russell 1000 Value ETF,Large Cap Blend Equities,0.0019
+USMV,iShares Edge MSCI Min Vol USA ETF,Large Cap Growth Equities,0.0015
+IWM,iShares Russell 2000 ETF,Small Cap Growth Equities,0.0019
+VCIT,Vanguard Intermediate-Term Corporate Bond ETF,Corporate Bonds,0.0005
+VO,Vanguard Mid-Cap Index ETF,Mid Cap Growth Equities,0.0004
+VNQ,Vanguard Real Estate Index Fund,Real Estate,0.0012
+BNDX,Vanguard Total International Bond ETF,Total Bond Market,0.0009
+XLK,Technology Select Sector SPDR Fund,Technology Equities,0.0013
+VGT,Vanguard Information Technology ETF,Technology Equities,0.0010
+VYM,Vanguard High Dividend Yield ETF,Large Cap Blend Equities,0.0006
+SHV,iShares Short Treasury Bond ETF,Government Bonds,0.0015
+IVW,iShares S&P 500 Growth ETF,Large Cap Growth Equities,0.0018
+XLV,Health Care Select Sector SPDR Fund,Health & Biotech Equities,0.0013
+VCSH,Vanguard Short-Term Corporate Bond ETF,Corporate Bonds,0.0005
+SHY,iShares 1-3 Year Treasury Bond ETF,Government Bonds,0.0015
+IAU,iShares Gold Trust,Precious Metals,0.0025
+ITOT,iShares Core S&P Total U.S. Stock Market ETF,Large Cap Growth Equities,0.0003
+VB,Vanguard Small Cap ETF,Small Cap Growth Equities,0.0005
+BSV,Vanguard Short-Term Bond ETF,Total Bond Market,0.0007
+IEF,iShares 7-10 Year Treasury Bond ETF,Government Bonds,0.0015
+VEU,Vanguard FTSE All-World ex-US ETF,Foreign Large Cap Equities,0.0009
+MBB,iShares MBS Bond ETF,Mortgage Backed Securities,0.0006
+EEM,iShares MSCI Emerging Markets ETF,Asia Pacific Equities,0.0068
+IWB,iShares Russell 1000 ETF,Large Cap Growth Equities,0.0015
+TIP,iShares TIPS Bond ETF,Inflation-Protected Bonds,0.0019
+BIL,SPDR Barclays 1-3 Month T-Bill ETF,Government Bonds,0.0014
+DIA,SPDR Dow Jones Industrial Average ETF,Large Cap Growth Equities,0.0016
+TLT,iShares 20+ Year Treasury Bond ETF,Government Bonds,0.0015
+HYG,iShares iBoxx $ High Yield Corporate Bond ETF,High Yield Bonds,0.0049
+SCHF,Schwab International Equity ETF,Foreign Large Cap Equities,0.0006
+SCHX,Schwab U.S. Large-Cap ETF,Large Cap Growth Equities,0.0003
+IWR,iShares Russell Midcap ETF,Mid Cap Growth Equities,0.0019
+VXUS,Vanguard Total International Stock ETF,Foreign Large Cap Equities,0.0009
+IXUS,iShares Core MSCI Total International Stock ETF,Foreign Large Cap Equities,0.0009
+QUAL,iShares Edge MSCI USA Quality Factor ETF,Large Cap Growth Equities,0.0015
+XLF,Financial Select Sector SPDR Fund,Financials Equities,0.0013
+VV,Vanguard Large Cap ETF,Large Cap Growth Equities,0.0004
+IVE,iShares S&P 500 Value ETF,Large Cap Blend Equities,0.0018
+GOVT,iShares U.S. Treasury Bond ETF,Government Bonds,0.0015
+IGSB,iShares Short-Term Corporate Bond ETF,Corporate Bonds,0.0006
+MUB,iShares National AMT-Free Muni Bond ETF,National Munis,0.0007
+SDY,SPDR S&P Dividend ETF,All Cap Equities,0.0035
+PFF,iShares Preferred and Income Securities ETF,Preferred Stock/Convertible Bonds,0.0046
+XLP,Consumer Staples Select Sector SPDR Fund,Consumer Staples Equities,0.0013
+SCHB,Schwab U.S. Broad Market ETF,Large Cap Growth Equities,0.0003
+GDX,VanEck Vectors Gold Miners ETF,Materials,0.0053
+DVY,iShares Select Dividend ETF,Large Cap Value Equities,0.0039
+MDY,SPDR S&P MidCap 400 ETF,Small Cap Growth Equities,0.0023
+MINT,PIMCO Enhanced Short Maturity Strategy Fund,Total Bond Market,0.0036
+VT,Vanguard Total World Stock ETF,Large Cap Growth Equities,0.0009
+EMB,iShares J.P. Morgan USD Emerging Markets Bond ETF,Emerging Markets Bonds,0.0039
+XLU,Utilities Select Sector SPDR Fund,Utilities Equities,0.0013
+BIV,Vanguard Intermediate-Term Bond ETF,Total Bond Market,0.0007
+IEI,iShares 3-7 Year Treasury Bond ETF,Government Bonds,0.0015
+RSP,Invesco S&P 500  Equal Weight ETF,Large Cap Growth Equities,0.0020
+CASH,Cash,Cash,.000
+JPST,JPMorgan Ultra-Short Income ETF,Money Market,.0018 
+ICSH,iShares Ultra Short-Term Bond ETF,Corporate Bonds,.0008
+GBIL,Goldman Sachs Treasury Access 0-1 Year ETF,Government Bonds,.0012
+NEAR,iShares Short Maturity Bond ETF,Total Bond Market,.0025
+SHYG,iShares 0-5 Year High Yield Corporate Bond ETF,High Yield Bonds,.0030
+ESGU,iShares ESG MSCI USA ETF,Large Cap Growth Equities,.0015
+VLUE,iShares Edge MSCI USA Value Factor ETF,Large Cap Value Equities,.0015
+EFG,iShares MSCI EAFE Growth ETF,Foreign Large Cap Equities,.0040
+ESGE, iShares ESG MSCI EM ETF,Asia Pacific Equities,.0025
+IXN,iShares Global Tech ETF,Technology Equities,.0046
+IHI,iShares U.S. Medical Devices ETF,Health & Biotech Equities,.0043
