@@ -41,10 +41,6 @@ class User(db.Model):
         default="/static/img/default-pic.png",
     )
 
-    header_image_url = db.Column(
-        db.Text,
-        default="/static/img/bg_1.jpg"
-    )
 
     risk_profile = db.Column(db.Text)
 
@@ -134,11 +130,14 @@ class Portfolios(db.Model):
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     name = db.Column(db.Text,nullable=False, unique=True)
-    SPY = db.Column(db.Integer, default=0)
+    ITOT = db.Column(db.Integer, default=0)
+    VEA = db.Column(db.Integer, default=0)
     VNQ = db.Column(db.Integer, default=0)
     GLD = db.Column(db.Integer, default=0)
-    IEF = db.Column(db.Integer, default=0)
-    CASH = db.Column(db.Integer, default=0)
+    AGG = db.Column(db.Integer, default=0)
+    BIL = db.Column(db.Integer, default=0)
+    fees = db.Column(db.Float, default=0)
+    desc = db.Column(db.Text, nullable=False)
 
 
     def to_dict(self):
@@ -147,11 +146,14 @@ class Portfolios(db.Model):
         return {
             "id": self.id,
             "name": self.name,
-            "VNQ": self.VNQ,
+            "ITOT": self.ITOT,
+            "VEA": self.VEA,
+            "VNQ": self.VEA,
             "GLD": self.GLD,
-            "SPY": self.SPY,
-            "IEF": self.IEF,
-            "CASH": self.CASH
+            "AGG": self.AGG,
+            "BIL": self.BIL,
+            "fees": self.fees,
+            "desc": self.desc
         }
 
 

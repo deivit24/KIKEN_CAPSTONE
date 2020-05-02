@@ -1,0 +1,44 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container-fluid pt-5">
+  <div class="row">
+    <div class="col-md-8">
+      <div id="desc">
+        <h1 class="text-center">
+          You have an
+          <span style="color: #00c5c8;" id="profile">{{risk_profile}}</span>
+          Risk Profile
+        </h1>
+      </div>
+      <div id="piechart" class="chart"></div>
+      <div id="fees"></div>
+    </div>
+    <div class="col-md-4">
+      <div id="login">
+        <h1 class="text-center mb-3">Login Now</h1>
+        <form action="/login" method="POST" id="user-result-form">
+          {{ form.hidden_tag() }} {% for field in form if
+          field.widget.input_type != 'hidden' %} {% for error in field.errors %}
+          <span class="text-danger">{{ error }}</span>
+          {% endfor %} {{ field(placeholder=field.label.text,
+          class="form-control") }} {% endfor %}
+
+          <button class="btn btn-primary btn-lg btn-block">Login!</button>
+        </form>
+        <h4 class="text-center">or</h4>
+        <a href="/signup" class="btn btn-lg btn-primary">Sign up</a>
+      </div>
+      <div class="mt-5" id="benefits">
+        <div>
+          <h2 class="text-center">User Benefits</h2>
+          <ul class="check-list">
+            <li>Save Risk Profile</li>
+            <li>Save Portfolio</li>
+            <li>Compare Portfolio Allocation To Other Companies</li>
+            <li>See Hypothetical Investment Fees</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,146 @@
+{% extends 'base.html' %} {% block risk_update_active %}active{% endblock %} {%
+block content %}
+<div class="container-fluid mt-3 pt-5 risk-form-page">
+  <form method="POST" id="risk_form">
+    {{ form.hidden_tag() }} {% for field in form if field.widget.input_type !=
+    'hidden' %} {% if field.name == 'q10' %}
+    <div class="field-{{field.name}} innactive">
+      {{ field.label(class_="question-label") }}
+      <p>
+        Which the following portfolios are you more comfortable with given the
+        best-case and worst-case annual return?
+      </p>
+      <button
+        type="button"
+        class="btn btn-sm btn-primary"
+        data-toggle="modal"
+        data-target="#question-ten"
+      >
+        See table
+      </button>
+      <!-- Modal -->
+      <div
+        class="modal fade mt-5"
+        id="question-ten"
+        tabindex="-1"
+        role="dialog"
+        style="z-index: 200;"
+        aria-labelledby="question-tenLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <small class="text-muted"
+                >The figures are hypothetical and do not represent the
+                performance of any particular investment.</small
+              >
+              <div class="table-responsive-sm">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th class="font-weight-bold" scope="col">Plan</th>
+                      <th class="font-weight-bold" scope="col">best- case</th>
+                      <th class="font-weight-bold" scope="col">worst-case</th>
+                      <th class="font-weight-bold" scope="col">
+                        Average Annual Return
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="text-center">
+                    <tr>
+                      <th class="font-weight-bold" scope="row">A</th>
+                      <td class="text-success">16.1%</td>
+                      <td class="text-danger">-5.4%</td>
+                      <td>7.0%</td>
+                    </tr>
+                    <tr>
+                      <th class="font-weight-bold" scope="row">B</th>
+                      <td class="text-success">24.8%</td>
+                      <td class="text-danger">-11.9%</td>
+                      <td>8.8%</td>
+                    </tr>
+                    <tr>
+                      <th class="font-weight-bold" scope="row">C</th>
+                      <td class="text-success">33.4%</td>
+                      <td class="text-danger">-18.0%</td>
+                      <td>10.2%</td>
+                    </tr>
+                    <tr>
+                      <th class="font-weight-bold" scope="row">D</th>
+                      <td class="text-success">42.6%</td>
+                      <td class="text-danger">-23.8%</td>
+                      <td>11.5%</td>
+                    </tr>
+                    <tr>
+                      <th class="font-weight-bold" scope="row">E</th>
+                      <td class="text-success">50.0%</td>
+                      <td class="text-danger">-28.2%</td>
+                      <td>12.3%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {% for subfield in field %}
+
+      <div class="form-check">
+        {{ subfield(class_="form-check-input ",onclick="show()" ) }}
+        <div class="check"></div>
+        {{ subfield.label(class_="form-check-label") }}
+      </div>
+
+      {% endfor %}
+      <i class="fas fa-arrow-right"></i>
+    </div>
+    {% elif field.name != 'q1' %}
+    <div class="field-{{field.name}} innactive">
+      {{ field.label(class_="question-label") }} {% for subfield in field %}
+
+      <div class="form-check">
+        {{ subfield(class_="form-check-input",onclick="show()") }}
+        <div class="check"></div>
+        {{subfield.label(class_="form-check-label") }}
+      </div>
+
+      {% endfor %}
+      <i class="fas fa-arrow-right"></i>
+    </div>
+    {% else %}
+    <div class="field-{{field.name}} ">
+      {{ field.label(class_="question-label") }} {% for subfield in field %}
+
+      <div class="form-check">
+        {{ subfield(class_="form-check-input",onclick="show()") }}
+        <div class="check"></div>
+        {{ subfield.label(class_="form-check-label") }}
+      </div>
+
+      {% endfor %}
+      <i class="fas fa-arrow-right"></i>
+    </div>
+    {% endif %} {% for err in field.errors %}
+    <p>{{err}}</p>
+    {% endfor %} {% endfor %}
+    <div
+      class="button-q innactive d-flex flex-column justify-content-end"
+      style="height: 300px;"
+    >
+      <button class="btn btn-primary btn-lg btn-block">Calculate</button>
+    </div>
+  </form>
+</div>
+{% endblock %}

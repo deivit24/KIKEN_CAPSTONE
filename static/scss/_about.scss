@@ -1,0 +1,87 @@
+#about {
+  .jumbotron {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      font-size: 4rem;
+      color: white;
+      span {
+        color: $blue;
+      }
+    }
+  }
+  .row {
+    .info {
+      background: $grey;
+      color: white;
+      padding: 35px;
+      border-radius: 25px;
+    }
+    .col-lg-6 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      p {
+        font-size: 1.5rem;
+      }
+      h2 {
+        font-size: 3rem;
+        color: $blue;
+      }
+    }
+    .col-12 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 500px;
+      margin-top: 50px;
+      h1 {
+        font-size: 4rem;
+      }
+      p {
+        font-size: 1.5rem;
+      }
+      span {
+        color: $blue;
+      }
+      .buttons {
+        .btn {
+          border-radius: 25px;
+          margin-top: 25px;
+        }
+        .btn-primary {
+          background: #00c5c8;
+          margin-right: 25px;
+          &:hover {
+            background: #029194;
+          }
+        }
+      }
+    }
+    .col-12 {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h1 {
+        font-size: 3rem;
+      }
+      p {
+        font-size: 2rem;
+      }
+      img {
+        width: 320px;
+        border-radius: 50%;
+        margin: 20px auto;
+      }
+    }
+  }
+}

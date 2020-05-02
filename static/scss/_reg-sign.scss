@@ -1,0 +1,73 @@
+/* Sign up page */
+.signup-page,
+.update-page {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h1 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  #signup_form,
+  #update_form {
+    padding: 30px 20px;
+    border-radius: 25px;
+    width: 360px;
+    margin: 20px auto;
+    box-shadow: 0 10px 14px rgba(0, 0, 0, 0.3), 0 8px 6px rgba(0, 0, 0, 0.22);
+    .form-control {
+      margin: 10px auto;
+      width: 320px;
+    }
+    .btn {
+      margin: 10px auto;
+      width: 320px;
+      border-radius: 25px;
+    }
+    .btn-primary {
+      border: $blue;
+      background: $blue;
+      &:hover {
+        background: darken($blue, $amount: 10);
+      }
+    }
+  }
+
+  .btn {
+    margin: 10px auto;
+    width: 320px;
+    border-radius: 25px;
+  }
+}
+.login-page {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h1 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  #user_form {
+    padding: 30px 20px;
+    border-radius: 25px;
+    width: 360px;
+    margin: 20px auto;
+    box-shadow: 0 10px 14px rgba(0, 0, 0, 0.3), 0 8px 6px rgba(0, 0, 0, 0.22);
+    .form-control {
+      margin: 10px auto;
+      width: 320px;
+    }
+    .btn {
+      margin: 10px auto;
+      width: 320px;
+      background: $blue;
+      border-radius: 25px;
+      border: $blue;
+      &:hover {
+        background: darken($blue, $amount: 10);
+      }
+    }
+  }
+}

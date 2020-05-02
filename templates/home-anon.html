@@ -1,0 +1,47 @@
+{% extends 'base.html' %} {% block home_active %}active{% endblock %} {% block
+content %}
+<div class="container-fluid home-page-anon">
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Welcome to KIKEN <small class="text=muted">[kē ken]</small></h1>
+      <p>
+        When you understand the financial risks of investing, you are prepared
+        to make the right decisions
+      </p>
+      <div class="buttons">
+        <a href="/risk-profile" class="btn btn-primary btn-lg"
+          >Take Assesment</a
+        >
+        <a href="/about" class="btn btn-outline-secondary btn-lg">Learn More</a>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <img class="img-fluid" src="/static/img/background.png" alt="" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <img class="img-fluid person" src="/static/img/person.jpg" alt="" />
+    </div>
+
+    <div class="col-md-6">
+      <h2>People are Individuals. Not a number.</h2>
+      <p>
+        Take a comprehensive Risk Profile Questionnaire that doesn't cut
+        corners.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h1>Are you are DYI investor?</h1>
+      <p>
+        Learn the methodologies behind our risk profile questionnaire and
+        portfolio allocations. It's time to act in your best interests
+      </p>
+      <a href="/about" class="btn btn-secondary btn-lg">Learn More</a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

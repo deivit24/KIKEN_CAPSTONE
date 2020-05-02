@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/formiojs@latest/dist/formio.full.min.css"
+    />
+    <!-- FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/21dd8fd46c.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- I put script at the bottom of body -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.0.3/nouislider.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/main.css" />
+    <!-- Google Fonts -->
+
+    <link rel="shortcut icon" href="/static/img/favicon.png" />
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <title>Kiken</title>
+  </head>
+
+  <body>
+    <div class="wrapper d-flex align-items-stretch">
+      <nav id="sidebar">
+        <div class="custom-menu">
+          <img id="logo" src="/static/img/big-logo.png" alt="" />
+          <button
+            type="button"
+            id="sidebarCollapse"
+            class="btn btn-primary"
+          ></button>
+        </div>
+        <div
+          class="img bg-wrap text-center py-4"
+          style="background-image: url(/static/img/bg_1.jpg);"
+        >
+          <div class="user-logo">
+            {% if not g.user %}
+            <div
+              class="img"
+              style="background-image: url(/static/img/small-logo.png);"
+            ></div>
+            {% else %}
+            <div
+              class="img"
+              style="background-image: url({{g.user.image_url}});"
+            ></div>
+            <h3>
+              {{g.user.first_name |capitalize}} {{g.user.last_name |capitalize}}
+            </h3>
+            {% endif %}
+          </div>
+        </div>
+        <ul class="list-unstyled components mb-5 sticky-top">
+          <li class="{% block home_active %}{% endblock %}">
+            <a href="/"><span class="fa fa-home mr-3"></span> Home</a>
+          </li>
+          <li class="{% block about_active %}{% endblock %}">
+            <a href="/about"><span class="fa fa-download mr-3"></span>About</a>
+          </li>
+
+          <li class="{% block metho_active %}{% endblock %}">
+            <a href="/methodology"
+              ><span class="fas fa-graduation-cap mr-3"></span>Our
+              Methodology</a
+            >
+          </li>
+          {% if not g.user %}
+          <li class="{% block risk_active %}{% endblock %}">
+            <a href="/risk-profile"
+              ><span class="fas fa-chalkboard-teacher mr-3"></span>Take
+              Assessment</a
+            >
+          </li>
+          <li class="{% block signup_active %}{% endblock %}">
+            <a href="/signup"
+              ><span class="fas fa-user-plus mr-3"></span>Sign Up</a
+            >
+          </li>
+          <li class="{% block login_active %}{% endblock %}">
+            <a href="/login"
+              ><span class="fas fa-user-lock mr-3"></span>Login</a
+            >
+          </li>
+          {% else %}
+          <li class="{% block risk_update_active %}{% endblock %}">
+            <a href="/update/risk-profile"
+              ><span class="fas fa-chalkboard-teacher mr-3"></span>Edit Risk
+              Profile</a
+            >
+          </li>
+          <li class="{% block profile_update_active %}{% endblock %}">
+            <a href="/update/profile"
+              ><span class="fas fa-user mr-3"></span>Update Profile</a
+            >
+          </li>
+          <li>
+            <a href="/logout"
+              ><span class="fa fa-sign-out mr-3"></span> Sign Out</a
+            >
+          </li>
+          {% endif %}
+        </ul>
+      </nav>
+
+      <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5 pt-5">
+        {% for category, message in get_flashed_messages(with_categories=True)
+        %}
+        <div class="alert alert-{{category}} alert-dismissible fade show mt-5">
+          {{ message }}
+          <button
+            type="button"
+            class="close"
+            data-dismiss="alert"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {% endfor %} {% block content %} {% endblock %}
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.0.3/nouislider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.2.0/wNumb.min.js"></script>
+    <!-- Include Choices JavaScript (latest) -->
+    <script src="https://unpkg.com/formiojs@latest/dist/formio.full.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.js"></script>
+    <script src="/static/js/main.js"></script>
+  </body>
+</html>

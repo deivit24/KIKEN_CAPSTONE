@@ -1,0 +1,47 @@
+@include mediaSm {
+  /* Risk Form Page */
+
+  .risk-form-page {
+    height: 70vh !important;
+  }
+
+  .field-q1,
+  .field-q2,
+  .field-q3,
+  .field-q4,
+  .field-q5,
+  .field-q6,
+  .field-q7,
+  .field-q8,
+  .field-q9,
+  .field-q10,
+  .button-q {
+    left: 0% !important;
+    width: 360px !important;
+
+    .question-label {
+      font-size: 1em !important;
+    }
+
+    .form-check {
+      margin-bottom: 20px !important;
+
+      .form-check-label {
+        font-size: 1em !important;
+      }
+    }
+  }
+
+  div.active {
+    left: 0% !important;
+  }
+
+  #formio {
+    width: 300px !important;
+    text-align: left;
+    font-size: 1rem;
+    .choices__list {
+      font-size: 0.8rem !important;
+    }
+  }
+}

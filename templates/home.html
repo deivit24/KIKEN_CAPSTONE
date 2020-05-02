@@ -1,0 +1,117 @@
+{% extends 'base.html' %} {% block home_active %} active {% endblock %} {% block
+content %}
+<div class="container-fluid home-page-user pt-5">
+  {% if g.user.risk_profile %}
+  <div class="row row-risk mt-2 py-4 px-2">
+    <div
+      class="col-lg-6 text-center d-flex flex-column align-items-center justify-content-center"
+    >
+      <h1>
+        You have an
+        <a style="color: #00c5c8;" id="profile">{{g.user.risk_profile}}</a>
+        Risk Profile
+      </h1>
+      <p>
+        Start comparing popular portfolio allocations below
+      </p>
+    </div>
+    <div
+      class="col-lg-6 d-flex flex-column align-items-center justify-content-center"
+    >
+      <div id="formio"></div>
+    </div>
+  </div>
+  <div class="row my-0 mx-0">
+    <div class="col-lg-6">
+      <div id="piechart" class="chart"></div>
+    </div>
+    <div class="col-lg-6">
+      <div id="piechart-compare" class="chart"></div>
+    </div>
+  </div>
+  <div class="row row-risk py-4">
+    <div class="col-lg-6" style="height: 320px;">
+      <div class="" id="fees"></div>
+      <table
+        id="dtBasicExample"
+        class="table table-hover table-striped table-sm"
+        cellspacing="0"
+        width="100%"
+      >
+        <thead>
+          <tr>
+            <th scope="col">Symbol</th>
+            <th scope="col">Name</th>
+            <th scope="col">Category</th>
+            <th scope="col">Expense</th>
+          </tr>
+        </thead>
+        <tbody id="portfolios">
+          <tr></tr>
+          <tr></tr>
+          <tr></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-lg-6" style="height: 320px; overflow-y: scroll;">
+      <div id="compare-fees"></div>
+      <table
+        id="dtBasicExample"
+        class="table table-hover table-striped table-sm"
+        cellspacing="0"
+        width="100%"
+      >
+        <thead>
+          <tr>
+            <th scope="col">Symbol</th>
+            <th scope="col">Name</th>
+            <th scope="col">Category</th>
+            <th scope="col">Expense</th>
+          </tr>
+        </thead>
+        <tbody id="compair-portfolios">
+          <tr></tr>
+          <tr></tr>
+          <tr></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row row-risk mt-2 py-4">
+    <div class="col-12">
+      <h2 class="text-center">
+        A hypothetical investment of $<span id="value"></span> will incur and
+        annual fee of
+      </h2>
+      <p class="text-center">
+        You can change the amount my dragging the slider
+      </p>
+    </div>
+    <br />
+    <div class="col-12 my-4">
+      <div id="update"></div>
+    </div>
+    <div id="fee-dollars" class="col-6"></div>
+    <div id="compare-fee-dollars" class="col-6"></div>
+  </div>
+
+  {% else %}
+  <div class="row pt-2">
+    <div class="col-md-6 no-risk">
+      <h1>Hello {{g.user.first_name|capitalize}}!</h1>
+      <p>Looks Empty... Let's starts by taking the Risk Profile Assessment</p>
+      <a href="/update/risk-profile" class="btn btn-primary btn-lg"
+        >Take Assesment</a
+      >
+    </div>
+    <div class="col-md-6 no-risk">
+      <img
+        src="https://cdn.dribbble.com/users/1025112/screenshots/4744274/document.gif"
+        alt=""
+      />
+    </div>
+
+    {% endif %}
+  </div>
+  {% endblock %}
+</div>

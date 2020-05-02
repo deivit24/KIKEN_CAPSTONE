@@ -1,0 +1,78 @@
+{% extends 'base.html' %} {% block about_active %}active{% endblock %} {% block
+content %}
+<div id="about" class="container-fluid">
+  <div class="jumbotron jumbotron-fluid mt-5">
+    <div class="container">
+      <h1 class="text-center">
+        About <span>KIKEN</span> <small class="text=muted">[kē ken]</small>
+      </h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6 info my-3">
+      <p>
+        KIKEN was created to guide DIY investors into the proper asset
+        allocation without the hassel of "Window Shopping" other portfolio
+        models.
+      </p>
+      <p>
+        The typical work flow for a DIY investor starts by doing research on
+        what to invest in.
+      </p>
+      <p>
+        Google will give you links of huge investment firms such as, Charles
+        Schwab, Fidelity, Acorns or BlackRock.
+      </p>
+      <p>
+        These links typically take you to a Risk Tolerance Questionnaire that
+        are designed to get you invested into their products and only gauges on
+        aspect of risk: emotional comfort to financial risk.
+      </p>
+      <p>
+        There are two other aspects that need to be taken into consideration:
+      </p>
+    </div>
+    <div class="col-lg-6 my-3">
+      <img
+        class="img-fluid"
+        src="https://cdn.dribbble.com/users/1025112/screenshots/4744274/document.gif"
+        alt=""
+      />
+    </div>
+    <div style="height: 350px" class="col-lg-6 text-center">
+      <h2>Risk Capacity</h2>
+      <p>This answers the question: </p><blockquote>"How much risk am I able to afford to take?"</blockquote>
+    </div>
+    <div style="height: 350px" class="col-lg-6 text-center">
+      <h2>Risk Required</h2>
+      <p>This answers the question: <blockquote>"How much risk is required ?"</blockquote></p>
+    </div>
+    <div class="col-12 text-center">
+      <h1><span>KIKEN</span> Risk Profile</h1>
+      <p>Take KIKEN's Assessment to see what is your <span>True</span> Risk Profile</p>
+      <div class="buttons">
+        <a href="/risk-profile" class="btn btn-primary btn-lg"
+          >Take Assesment</a
+        >
+        <a href="/methodology" class="btn btn-outline-secondary btn-lg">Methodology</a>
+      </div>
+    </div>
+  </div>
+  <div class="row my-5">
+    <div class="col-12">
+      <h1 class="my-3"><span>KIKEN</span> was created by:</h1>
+      <img class="img-fluid" src="https://www.deivitsalazar.com/dist/img/me.jpg" alt="">
+      <h1><span>David</span> Salazar</h1>
+      <p>Software Developer</p>
+      <div style="width: 320px; margin:0  auto;">
+        <a class="float-left" href="https://github.com/deivit24"><i class="fab fa-github"></i> GitHub</a>
+     
+      <a class="float-right" href="https://deivitsalazar.com"><i class="fas fa-portrait"></i> Portfolio</a>
+      </div>
+    </div>
+    <div class="col-md-6"></div>
+  </div>
+</div>
+
+{% endblock %}

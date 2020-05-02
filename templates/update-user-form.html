@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block profile_update_active %}active{% endblock
+%}{% block content %}
+<div class="container-fluid pt-5 update-page">
+  <form method="POST" id="update_form">
+    <h1>Update</h1>
+    {{ form.hidden_tag() }} {% for field in form if field.widget.input_type !=
+    'hidden' %} {% for error in field.errors %}
+    <span class="text-danger">{{ error }}</span>
+    {% endfor %} {{ field(placeholder=field.label.text, class="form-control") }}
+    {% endfor %}
+
+    <button class="btn btn-primary btn-lg btn-block">Update!</button>
+    <h3 class="text-center">or</h3>
+    <a href="/update/password" class="btn btn-secondary btn-sm btn-block"
+      >Change Password?</a
+    >
+  </form>
+  <form action="/update/delete" method="POST">
+    <button class="btn btn-danger btn-sm btn-block">Delete Profile</button>
+  </form>
+</div>
+{% endblock %}
