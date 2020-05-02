@@ -40,7 +40,10 @@ function nextQuestion(parent, nextForm, arrow) {
 
 animatedForm();
 
-const BASE_URL = 'http://127.0.0.1:5000/api';
+const BASE_URL = window.location.origin + '/api';
+// const base_url = window.location.origin + '/api';
+// console.log(BASE_URL);
+// console.log(base_url);
 
 function generatePortfolios(portfolio) {
   let array = [];
@@ -165,7 +168,6 @@ var updateSliderValue = document.getElementById('value');
 
 noUiSlider.create(updateSlider, {
   start: [100000],
-
   behaviour: 'tap',
   step: 10000,
   range: {
