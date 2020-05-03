@@ -148,7 +148,7 @@ class Portfolios(db.Model):
             "name": self.name,
             "ITOT": self.ITOT,
             "VEA": self.VEA,
-            "VNQ": self.VEA,
+            "VNQ": self.VNQ,
             "GLD": self.GLD,
             "AGG": self.AGG,
             "BIL": self.BIL,

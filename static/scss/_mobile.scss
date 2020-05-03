@@ -1,8 +1,12 @@
 @include mediaSm {
   /* Risk Form Page */
-
+  #content {
+    padding: 12px !important;
+  }
   .risk-form-page {
     height: 70vh !important;
+    padding-left: 0px !important;
+    padding-top: 0px !important;
   }
 
   .field-q1,
@@ -17,10 +21,12 @@
   .field-q10,
   .button-q {
     left: 0% !important;
-    width: 360px !important;
+    width: 340px !important;
+    padding: 0px !important;
+    margin: 5px auto !important;
 
     .question-label {
-      font-size: 1em !important;
+      font-size: 0.8em !important;
     }
 
     .form-check {
@@ -219,7 +225,7 @@
       border-radius: 25px;
       margin-bottom: 20px !important;
       h1 {
-        font-size: 2.5rem !important;
+        font-size: 1.5rem !important;
       }
       .table:first-child {
         height: auto !important;
@@ -290,6 +296,38 @@
       background: #00c5c8;
       border-radius: 25px;
       float: right;
+    }
+  }
+
+  // results page
+
+  #desc {
+    h1 {
+      font-size: 1.5rem;
+    }
+    p {
+      text-align: center;
+    }
+  }
+
+  #login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px !important;
+    .btn {
+      width: 250px !important;
+    }
+    #user-result-form {
+      width: 300px !important;
+
+      .form-control {
+        width: 250px !important;
+      }
+      .btn {
+        width: 250px !important;
+      }
     }
   }
 }

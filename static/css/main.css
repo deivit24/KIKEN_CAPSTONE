@@ -156,8 +156,12 @@ h5,
 
 @media screen and (max-width: 500px) {
   /* Risk Form Page */
+  #content {
+    padding: 12px !important; }
   .risk-form-page {
-    height: 70vh !important; }
+    height: 70vh !important;
+    padding-left: 0px !important;
+    padding-top: 0px !important; }
   .field-q1,
   .field-q2,
   .field-q3,
@@ -170,7 +174,9 @@ h5,
   .field-q10,
   .button-q {
     left: 0% !important;
-    width: 360px !important; }
+    width: 340px !important;
+    padding: 0px !important;
+    margin: 5px auto !important; }
     .field-q1 .question-label,
     .field-q2 .question-label,
     .field-q3 .question-label,
@@ -182,7 +188,7 @@ h5,
     .field-q9 .question-label,
     .field-q10 .question-label,
     .button-q .question-label {
-      font-size: 1em !important; }
+      font-size: 0.8em !important; }
     .field-q1 .form-check,
     .field-q2 .form-check,
     .field-q3 .form-check,
@@ -327,7 +333,7 @@ h5,
       border-radius: 25px;
       margin-bottom: 20px !important; }
       .home-page-user .row-risk h1 {
-        font-size: 2.5rem !important; }
+        font-size: 1.5rem !important; }
       .home-page-user .row-risk .table:first-child {
         height: auto !important; }
       .home-page-user .row-risk .table:last-child {
@@ -368,7 +374,25 @@ h5,
     #formio .btn {
       background: #00c5c8;
       border-radius: 25px;
-      float: right; } }
+      float: right; }
+  #desc h1 {
+    font-size: 1.5rem; }
+  #desc p {
+    text-align: center; }
+  #login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px !important; }
+    #login .btn {
+      width: 250px !important; }
+    #login #user-result-form {
+      width: 300px !important; }
+      #login #user-result-form .form-control {
+        width: 250px !important; }
+      #login #user-result-form .btn {
+        width: 250px !important; } }
 
 /* Sign up page */
 .signup-page,
@@ -728,6 +752,9 @@ a[data-toggle='collapse'] {
     color: #32373d;
     padding: 20px 15px;
     text-align: center; }
+
+#update .noUi-touch-area {
+  background: #00c5c8; }
 
 #formio {
   width: 380px;

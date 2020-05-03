@@ -48,6 +48,8 @@ const BASE_URL = window.location.origin + '/api';
 function generatePortfolios(portfolio) {
   let array = [];
   for (let [key, value] of Object.entries(portfolio)) {
+    console.log([key, value]);
+
     if (
       key != 'id' &&
       key != 'name' &&
@@ -58,8 +60,9 @@ function generatePortfolios(portfolio) {
       array.push([key, value]);
     }
   }
-  let title = `${portfolio.name} ETF Allocation`;
+  let title = `KIKEN ${portfolio.name} ETF Allocation`;
   array.unshift(['ETF', 'Allocation']);
+  console.log(array);
 
   google.load('visualization', '1', { packages: ['corechart'] });
   google.charts.setOnLoadCallback(drawChart);
@@ -68,16 +71,20 @@ function generatePortfolios(portfolio) {
     var data = google.visualization.arrayToDataTable(array);
 
     var options = {
+      legend: {
+        position: 'bottom',
+        alignment: 'start',
+        textStyle: { fontSize: 12 },
+      },
+
       title: title,
-      pieHole: 0.5,
+      pieHole: 0.3,
       width: '100%',
       height: '100%',
-
       is3D: false,
       animation: {
         duration: 1000,
         easing: 'in',
-        startup: true,
       },
     };
     var chart = new google.visualization.PieChart(
@@ -115,8 +122,13 @@ function generateComparedPortfolios(res) {
     var data = google.visualization.arrayToDataTable(array);
 
     var options = {
+      legend: {
+        position: 'bottom',
+        alignment: 'start',
+        textStyle: { fontSize: 12 },
+      },
       title: title,
-      pieHole: 0.5,
+      pieHole: 0.3,
       width: '100%',
       height: '100%',
 
@@ -124,7 +136,6 @@ function generateComparedPortfolios(res) {
       animation: {
         duration: 1000,
         easing: 'in',
-        startup: true,
       },
     };
 
@@ -200,7 +211,7 @@ function populate(res) {
     if (key == 'fees') {
       $('#fees').append(`
       
-      <h4 class="float-left pl-3">Average Portfolio Fee: </h4>
+      <h4 class="float-left">Average Portfolio Fee: </h4>
       <h4 class="float-right" style="color:#00c5c8;"> ${(value * 100).toFixed(
         2
       )}%</h4>

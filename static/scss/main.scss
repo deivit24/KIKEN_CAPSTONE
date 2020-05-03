@@ -366,6 +366,12 @@ a[data-toggle='collapse'] {
   }
 }
 
+#update {
+  .noUi-touch-area {
+    background: $blue;
+  }
+}
+
 #formio {
   width: 380px;
   text-align: left;
