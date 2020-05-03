@@ -44,4 +44,252 @@
       font-size: 0.8rem !important;
     }
   }
+
+  // Content Wrapper
+
+  #content {
+    margin-top: 100px !important ;
+  }
+
+  .home-page-anon {
+    .col-lg-6 {
+      height: auto !important;
+
+      margin: 50px 0 !important;
+      h1 {
+        font-size: 3rem !important;
+        margin-bottom: 25px;
+        small {
+          color: lightgrey;
+        }
+      }
+      h2 {
+        font-size: 2rem !important;
+      }
+      .person {
+        max-width: 300px !important;
+      }
+      p {
+        font-size: 1.3rem !important;
+        line-height: 30px !important;
+      }
+      .buttons {
+        .btn {
+          font-size: 0.8rem !important;
+        }
+      }
+    }
+    .col {
+      h1 {
+        font-size: 3rem !important;
+      }
+      p {
+        font-size: 1.3rem !important;
+        line-height: 30px !important;
+      }
+      .btn {
+        font-size: 0.8rem !important;
+      }
+    }
+  }
+  #sidebar {
+    .custom-menu {
+      padding-top: 10px !important;
+      right: 28px !important;
+    }
+
+    #logo {
+      height: 70px !important;
+    }
+  }
+
+  // About Page
+
+  #about {
+    .jumbotron {
+      margin-top: 0px !important ;
+      padding-top: 0px !important;
+      h1 {
+        font-size: 3rem !important;
+        color: white;
+        span {
+          color: $blue;
+        }
+      }
+    }
+    .row {
+      .col-lg-6 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        p {
+          font-size: 1rem !important;
+        }
+        h2 {
+          font-size: 2rem !important;
+        }
+      }
+      .col-12 {
+        margin-top: 25px !important;
+        h1 {
+          font-size: 2rem !important;
+        }
+        p {
+          font-size: 1rem !important;
+        }
+        span {
+          color: $blue;
+        }
+        .buttons {
+          display: block !important;
+          .btn {
+            margin: 15px auto !important;
+          }
+          .btn-primary {
+            margin-right: 0px !important;
+          }
+        }
+      }
+    }
+  }
+
+  #methodology {
+    .jumbotron {
+      margin-top: 0px !important ;
+      padding-top: 0px !important;
+      h1 {
+        font-size: 3rem !important;
+      }
+
+      h2 {
+        font-size: 2rem !important;
+      }
+    }
+    .my-3 {
+      h1 {
+        font-size: 2.5rem !important;
+      }
+      h3 {
+        font-size: 1.5rem !important;
+      }
+      p {
+        font-size: 1rem !important;
+      }
+    }
+  }
+
+  // Signup Login mobile
+
+  /* Sign up page */
+  .signup-page,
+  .update-page {
+    height: 60vh !important;
+    #signup_form,
+    #update_form {
+      width: 300px !important;
+      .form-control {
+        width: 250px !important;
+      }
+      .btn {
+        width: 250px !important;
+      }
+    }
+    .btn {
+      width: 250px !important;
+    }
+  }
+  .login-page {
+    height: 60vh !important;
+    #user_form {
+      width: 300px !important;
+      .form-control {
+        width: 250px !important;
+      }
+      .btn {
+        width: 250px !important;
+      }
+    }
+  }
+
+  /* Home Page No Risk Profile */
+  .home-page-user {
+    padding-top: 0px !important;
+    .row-risk {
+      box-shadow: 0 10px 14px rgba(0, 0, 0, 0.3), 0 8px 6px rgba(0, 0, 0, 0.22);
+      border-radius: 25px;
+      margin-bottom: 20px !important;
+      h1 {
+        font-size: 2.5rem !important;
+      }
+      .table:first-child {
+        height: auto !important;
+      }
+      .table:last-child {
+        height: 500px !important;
+      }
+
+      .table {
+        table {
+          font-size: 0.7rem !important;
+        }
+      }
+      #fees,
+      #compare-fees {
+        h4 {
+          font-size: 1.2rem !important;
+        }
+      }
+
+      .col-12 {
+        h2 {
+          font-size: 1.5rem !important;
+        }
+        #update {
+          .noUi-touch-area {
+            background: $blue;
+          }
+        }
+      }
+    }
+    .no-risk {
+      height: 35vh !important;
+
+      h1 {
+        font-size: 3rem !important;
+      }
+      p {
+        font-size: 1.2rem !important;
+        line-height: 30px !important;
+      }
+
+      img {
+        width: 300px !important;
+      }
+    }
+    .risk {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h1 {
+        border-radius: 25px;
+        box-shadow: 0 10px 14px rgba(0, 0, 0, 0.3),
+          0 8px 6px rgba(0, 0, 0, 0.22);
+        width: 100%;
+        color: #32373d;
+        padding: 20px 15px;
+        text-align: center;
+      }
+    }
+  }
+
+  #formio {
+    width: 280px !important;
+    text-align: left;
+    .btn {
+      background: #00c5c8;
+      border-radius: 25px;
+      float: right;
+    }
+  }
 }

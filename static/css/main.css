@@ -214,7 +214,161 @@ h5,
     text-align: left;
     font-size: 1rem; }
     #formio .choices__list {
-      font-size: 0.8rem !important; } }
+      font-size: 0.8rem !important; }
+  #content {
+    margin-top: 100px !important; }
+  .home-page-anon .col-lg-6 {
+    height: auto !important;
+    margin: 50px 0 !important; }
+    .home-page-anon .col-lg-6 h1 {
+      font-size: 3rem !important;
+      margin-bottom: 25px; }
+      .home-page-anon .col-lg-6 h1 small {
+        color: lightgrey; }
+    .home-page-anon .col-lg-6 h2 {
+      font-size: 2rem !important; }
+    .home-page-anon .col-lg-6 .person {
+      max-width: 300px !important; }
+    .home-page-anon .col-lg-6 p {
+      font-size: 1.3rem !important;
+      line-height: 30px !important; }
+    .home-page-anon .col-lg-6 .buttons .btn {
+      font-size: 0.8rem !important; }
+  .home-page-anon .col h1 {
+    font-size: 3rem !important; }
+  .home-page-anon .col p {
+    font-size: 1.3rem !important;
+    line-height: 30px !important; }
+  .home-page-anon .col .btn {
+    font-size: 0.8rem !important; }
+  #sidebar .custom-menu {
+    padding-top: 10px !important;
+    right: 28px !important; }
+  #sidebar #logo {
+    height: 70px !important; }
+  #about .jumbotron {
+    margin-top: 0px !important;
+    padding-top: 0px !important; }
+    #about .jumbotron h1 {
+      font-size: 3rem !important;
+      color: white; }
+      #about .jumbotron h1 span {
+        color: #00c5c8; }
+  #about .row .col-lg-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    #about .row .col-lg-6 p {
+      font-size: 1rem !important; }
+    #about .row .col-lg-6 h2 {
+      font-size: 2rem !important; }
+  #about .row .col-12 {
+    margin-top: 25px !important; }
+    #about .row .col-12 h1 {
+      font-size: 2rem !important; }
+    #about .row .col-12 p {
+      font-size: 1rem !important; }
+    #about .row .col-12 span {
+      color: #00c5c8; }
+    #about .row .col-12 .buttons {
+      display: block !important; }
+      #about .row .col-12 .buttons .btn {
+        margin: 15px auto !important; }
+      #about .row .col-12 .buttons .btn-primary {
+        margin-right: 0px !important; }
+  #methodology .jumbotron {
+    margin-top: 0px !important;
+    padding-top: 0px !important; }
+    #methodology .jumbotron h1 {
+      font-size: 3rem !important; }
+    #methodology .jumbotron h2 {
+      font-size: 2rem !important; }
+  #methodology .my-3 h1 {
+    font-size: 2.5rem !important; }
+  #methodology .my-3 h3 {
+    font-size: 1.5rem !important; }
+  #methodology .my-3 p {
+    font-size: 1rem !important; }
+  /* Sign up page */
+  .signup-page,
+  .update-page {
+    height: 60vh !important; }
+    .signup-page #signup_form,
+    .signup-page #update_form,
+    .update-page #signup_form,
+    .update-page #update_form {
+      width: 300px !important; }
+      .signup-page #signup_form .form-control,
+      .signup-page #update_form .form-control,
+      .update-page #signup_form .form-control,
+      .update-page #update_form .form-control {
+        width: 250px !important; }
+      .signup-page #signup_form .btn,
+      .signup-page #update_form .btn,
+      .update-page #signup_form .btn,
+      .update-page #update_form .btn {
+        width: 250px !important; }
+    .signup-page .btn,
+    .update-page .btn {
+      width: 250px !important; }
+  .login-page {
+    height: 60vh !important; }
+    .login-page #user_form {
+      width: 300px !important; }
+      .login-page #user_form .form-control {
+        width: 250px !important; }
+      .login-page #user_form .btn {
+        width: 250px !important; }
+  /* Home Page No Risk Profile */
+  .home-page-user {
+    padding-top: 0px !important; }
+    .home-page-user .row-risk {
+      box-shadow: 0 10px 14px rgba(0, 0, 0, 0.3), 0 8px 6px rgba(0, 0, 0, 0.22);
+      border-radius: 25px;
+      margin-bottom: 20px !important; }
+      .home-page-user .row-risk h1 {
+        font-size: 2.5rem !important; }
+      .home-page-user .row-risk .table:first-child {
+        height: auto !important; }
+      .home-page-user .row-risk .table:last-child {
+        height: 500px !important; }
+      .home-page-user .row-risk .table table {
+        font-size: 0.7rem !important; }
+      .home-page-user .row-risk #fees h4,
+      .home-page-user .row-risk #compare-fees h4 {
+        font-size: 1.2rem !important; }
+      .home-page-user .row-risk .col-12 h2 {
+        font-size: 1.5rem !important; }
+      .home-page-user .row-risk .col-12 #update .noUi-touch-area {
+        background: #00c5c8; }
+    .home-page-user .no-risk {
+      height: 35vh !important; }
+      .home-page-user .no-risk h1 {
+        font-size: 3rem !important; }
+      .home-page-user .no-risk p {
+        font-size: 1.2rem !important;
+        line-height: 30px !important; }
+      .home-page-user .no-risk img {
+        width: 300px !important; }
+    .home-page-user .risk {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .home-page-user .risk h1 {
+        border-radius: 25px;
+        box-shadow: 0 10px 14px rgba(0, 0, 0, 0.3), 0 8px 6px rgba(0, 0, 0, 0.22);
+        width: 100%;
+        color: #32373d;
+        padding: 20px 15px;
+        text-align: center; }
+  #formio {
+    width: 280px !important;
+    text-align: left; }
+    #formio .btn {
+      background: #00c5c8;
+      border-radius: 25px;
+      float: right; } }
 
 /* Sign up page */
 .signup-page,
@@ -358,7 +512,7 @@ h5,
     display: inline;
     position: absolute;
     top: 20px;
-    right: 0;
+    right: 25px;
     margin-right: -35px;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
@@ -475,32 +629,32 @@ a[data-toggle='collapse'] {
   background: white;
   z-index: 50; }
 
-.home-page-anon .col-md-6 {
+.home-page-anon .col-lg-6 {
   height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center; }
-  .home-page-anon .col-md-6 h1 {
+  .home-page-anon .col-lg-6 h1 {
     font-size: 4rem;
     margin-bottom: 25px; }
-    .home-page-anon .col-md-6 h1 small {
+    .home-page-anon .col-lg-6 h1 small {
       color: lightgrey; }
-  .home-page-anon .col-md-6 h2 {
+  .home-page-anon .col-lg-6 h2 {
     font-size: 3rem;
     margin-bottom: 25px; }
-  .home-page-anon .col-md-6 .person {
-    max-width: 500px !important;
+  .home-page-anon .col-lg-6 .person {
+    max-width: 400px;
     margin: 0 auto; }
-  .home-page-anon .col-md-6 p {
+  .home-page-anon .col-lg-6 p {
     font-size: 2rem;
     line-height: 40px; }
-  .home-page-anon .col-md-6 .buttons .btn {
+  .home-page-anon .col-lg-6 .buttons .btn {
     border-radius: 25px;
     margin-top: 25px; }
-  .home-page-anon .col-md-6 .buttons .btn-primary {
+  .home-page-anon .col-lg-6 .buttons .btn-primary {
     background: #00c5c8;
     margin-right: 25px; }
-    .home-page-anon .col-md-6 .buttons .btn-primary:hover {
+    .home-page-anon .col-lg-6 .buttons .btn-primary:hover {
       background: #029194; }
 
 .home-page-anon .col {
@@ -539,6 +693,8 @@ a[data-toggle='collapse'] {
 .home-page-user .row-risk {
   box-shadow: 0 10px 14px rgba(0, 0, 0, 0.3), 0 8px 6px rgba(0, 0, 0, 0.22);
   border-radius: 25px; }
+  .home-page-user .row-risk .table {
+    height: 320px; }
 
 .home-page-user .no-risk {
   height: 80vh;
@@ -886,8 +1042,7 @@ th {
   position: relative;
   width: 100%;
   min-height: 500px;
-  margin: 50px;
-  font-family: 'Manrope', sans-serif; }
+  margin-top: 50px !important; }
 
 #four04 {
   height: 70vh;

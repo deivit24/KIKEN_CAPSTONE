@@ -87,7 +87,7 @@
     display: inline;
     position: absolute;
     top: 20px;
-    right: 0;
+    right: 25px;
     margin-right: -35px;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
@@ -235,7 +235,7 @@ a[data-toggle='collapse'] {
 // HOME PAGE ANON
 
 .home-page-anon {
-  .col-md-6 {
+  .col-lg-6 {
     height: 90vh;
     display: flex;
     flex-direction: column;
@@ -252,7 +252,7 @@ a[data-toggle='collapse'] {
       margin-bottom: 25px;
     }
     .person {
-      max-width: 500px !important;
+      max-width: 400px;
       margin: 0 auto;
     }
     p {
@@ -323,6 +323,9 @@ a[data-toggle='collapse'] {
   .row-risk {
     box-shadow: 0 10px 14px rgba(0, 0, 0, 0.3), 0 8px 6px rgba(0, 0, 0, 0.22);
     border-radius: 25px;
+    .table {
+      height: 320px;
+    }
   }
   .no-risk {
     height: 80vh;
@@ -605,8 +608,7 @@ th {
   position: relative;
   width: 100%;
   min-height: 500px;
-  margin: 50px;
-  font-family: 'Manrope', sans-serif;
+  margin-top: 50px !important;
 }
 
 #four04 {
