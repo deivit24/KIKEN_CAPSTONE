@@ -391,10 +391,10 @@ a[data-toggle='collapse'] {
 /* Risk Form Page */
 
 .risk-form-page {
-  height: 40vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: top center;
 
   transition: all 0.8s ease-in-out;
   .btn-primary {
@@ -550,14 +550,14 @@ div.active {
   transition: all 0.8s ease-in-out;
   #user-result-form {
     .form-control {
-      width: 360px;
+      width: 100%;
       margin: 10px auto;
     }
     .btn-primary {
       background: $blue;
       outline: $blue;
       border: $blue;
-      width: 360px;
+      width: 100%;
       margin: 10px auto;
       &:hover {
         background: darken($blue, $amount: 10);
@@ -570,7 +570,7 @@ div.active {
     background: $blue;
     outline: $blue;
     border: $blue;
-    width: 360px;
+    width: 100%;
     margin: 10px auto;
     &:hover {
       background: darken($blue, $amount: 10);

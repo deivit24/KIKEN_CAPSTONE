@@ -771,10 +771,10 @@ a[data-toggle='collapse'] {
 
 /* Risk Form Page */
 .risk-form-page {
-  height: 40vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: top center;
   transition: all 0.8s ease-in-out; }
   .risk-form-page .btn-primary {
     background: #00c5c8;
@@ -1013,14 +1013,14 @@ div.active {
   transition: all 0.8s ease-in-out; }
   #desc #user-result-form .form-control,
   #login #user-result-form .form-control {
-    width: 360px;
+    width: 100%;
     margin: 10px auto; }
   #desc #user-result-form .btn-primary,
   #login #user-result-form .btn-primary {
     background: #00c5c8;
     outline: #00c5c8;
     border: #00c5c8;
-    width: 360px;
+    width: 100%;
     margin: 10px auto; }
     #desc #user-result-form .btn-primary:hover,
     #login #user-result-form .btn-primary:hover {
@@ -1031,7 +1031,7 @@ div.active {
     background: #00c5c8;
     outline: #00c5c8;
     border: #00c5c8;
-    width: 360px;
+    width: 100%;
     margin: 10px auto; }
     #desc .btn-primary:hover,
     #login .btn-primary:hover {
