@@ -48,8 +48,6 @@ const BASE_URL = window.location.origin + '/api';
 function generatePortfolios(portfolio) {
   let array = [];
   for (let [key, value] of Object.entries(portfolio)) {
-    console.log([key, value]);
-
     if (
       key != 'id' &&
       key != 'name' &&
@@ -62,7 +60,6 @@ function generatePortfolios(portfolio) {
   }
   let title = `KIKEN ${portfolio.name} ETF Allocation`;
   array.unshift(['ETF', 'Allocation']);
-  console.log(array);
 
   google.load('visualization', '1', { packages: ['corechart'] });
   google.charts.setOnLoadCallback(drawChart);
@@ -82,6 +79,7 @@ function generatePortfolios(portfolio) {
       width: '100%',
       height: '100%',
       is3D: false,
+      pieStartAngle: 0,
       animation: {
         duration: 1000,
         easing: 'in',
@@ -90,6 +88,14 @@ function generatePortfolios(portfolio) {
     var chart = new google.visualization.PieChart(
       document.getElementById('piechart')
     );
+    google.visualization.events.addListener(chart, 'ready', function () {
+      if (options.pieStartAngle < 10) {
+        options.pieStartAngle++;
+        setTimeout(function () {
+          chart.draw(data, options);
+        }, 1);
+      }
+    });
     chart.draw(data, options);
   }
   $(window).resize(function () {
@@ -131,7 +137,7 @@ function generateComparedPortfolios(res) {
       pieHole: 0.3,
       width: '100%',
       height: '100%',
-
+      pieStartAngle: 100,
       is3D: false,
       animation: {
         duration: 1000,
@@ -142,6 +148,14 @@ function generateComparedPortfolios(res) {
     var chart = new google.visualization.PieChart(
       document.getElementById('piechart-compare')
     );
+    google.visualization.events.addListener(chart, 'ready', function () {
+      if (options.pieStartAngle < 110) {
+        options.pieStartAngle++;
+        setTimeout(function () {
+          chart.draw(data, options);
+        }, 1);
+      }
+    });
     chart.draw(data, options);
   }
   $(window).resize(function () {
@@ -207,6 +221,7 @@ function populate(res) {
     }
     if (key == 'desc') {
       $('#desc').append(`<p>${value}</p>`);
+      console.log(value);
     }
     if (key == 'fees') {
       $('#fees').append(`
@@ -269,6 +284,7 @@ function populateCompared(res) {
     ) {
       array.push(key);
     }
+
     if (key == 'fees') {
       $('#compare-fees').append(`
       

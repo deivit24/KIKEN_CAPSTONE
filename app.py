@@ -167,13 +167,13 @@ def new_risk_profile():
 
         answers = [int(q1), int(q2), int(q3), int(q4), int(q5), int(q6), int(q7), int(q8), int(q9), int(q10)]
         Sum = sum(answers)
-        if Sum <= 20:
+        if Sum < 20:
             risk_profile = "Preservation"
-        elif Sum > 20 and Sum <= 40:
+        elif Sum >= 20 and Sum < 40:
             risk_profile = "Conservative"
-        elif Sum > 40 and Sum <= 60:
+        elif Sum >= 40 and Sum < 60:
             risk_profile = "Balanced"
-        elif Sum > 60 and Sum <= 80:
+        elif Sum >= 60 and Sum <= 80:
             risk_profile = "Aggressive"
         else:
             risk_profile = "All Equity"
@@ -204,16 +204,17 @@ def update_riskprofile():
 
         answers = [int(q1), int(q2), int(q3), int(q4), int(q5), int(q6), int(q7), int(q8), int(q9), int(q10)]
         Sum = sum(answers)
-        if Sum <= 20:
+        if Sum < 20:
             risk_profile = "Preservation"
-        elif Sum > 20 and Sum <= 40:
+        elif Sum >= 20 and Sum < 40:
             risk_profile = "Conservative"
-        elif Sum > 40 and Sum <= 60:
+        elif Sum >= 40 and Sum < 60:
             risk_profile = "Balanced"
-        elif Sum > 60 and Sum <= 80:
+        elif Sum >= 60 and Sum <= 80:
             risk_profile = "Aggressive"
         else:
             risk_profile = "All Equity"
+            
         user.risk_profile = risk_profile
         db.session.commit()
         flash("Update Successful", "success")

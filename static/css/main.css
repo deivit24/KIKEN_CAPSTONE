@@ -652,7 +652,7 @@ a[data-toggle='collapse'] {
   padding-left: 60px;
   padding-right: 100%;
   background: white;
-  z-index: 50; }
+  z-index: 4; }
 
 .home-page-anon .col-lg-6 {
   height: 90vh;
@@ -1075,7 +1075,8 @@ th {
   position: relative;
   width: 100%;
   min-height: 500px;
-  margin-top: 50px !important; }
+  margin-top: 50px !important;
+  transition: all 1s ease-in-out; }
 
 #four04 {
   height: 70vh;
