@@ -161,7 +161,8 @@ h5,
   .risk-form-page {
     height: 70vh !important;
     padding-left: 0px !important;
-    padding-top: 0px !important; }
+    padding-top: 0px !important;
+    justify-content: top center !important; }
   .field-q1,
   .field-q2,
   .field-q3,
@@ -770,11 +771,16 @@ a[data-toggle='collapse'] {
 
 /* Risk Form Page */
 .risk-form-page {
-  height: 70vh;
+  height: 40vh;
   display: flex;
   flex-direction: column;
-  justify-content: top center;
+  justify-content: center;
   transition: all 0.8s ease-in-out; }
+  .risk-form-page .btn-primary {
+    background: #00c5c8;
+    border: #00c5c8; }
+    .risk-form-page .btn-primary:hover {
+      background: #009395; }
 
 #risk_form {
   position: relative; }

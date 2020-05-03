@@ -391,12 +391,19 @@ a[data-toggle='collapse'] {
 /* Risk Form Page */
 
 .risk-form-page {
-  height: 70vh;
+  height: 40vh;
   display: flex;
   flex-direction: column;
-  justify-content: top center;
+  justify-content: center;
 
   transition: all 0.8s ease-in-out;
+  .btn-primary {
+    background: $blue;
+    border: $blue;
+    &:hover {
+      background: darken($blue, $amount: 10);
+    }
+  }
 }
 #risk_form {
   position: relative;
