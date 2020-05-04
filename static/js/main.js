@@ -221,7 +221,6 @@ function populate(res) {
     }
     if (key == 'desc') {
       $('#desc').append(`<p>${value}</p>`);
-      console.log(value);
     }
     if (key == 'fees') {
       $('#fees').append(`
@@ -256,7 +255,7 @@ function populate(res) {
         })
     );
   }
-  let table = document.getElementById('portfolios');
+
   Promise.all(promises).then(() => {
     for (i = 0; i < users.length; i++) {
       $('#portfolios').append(
