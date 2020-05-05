@@ -163,6 +163,14 @@ h5,
     padding-left: 0px !important;
     padding-top: 0px !important;
     justify-content: top center !important; }
+    .risk-form-page #progress {
+      width: 340px !important;
+      position: relative;
+      top: 0%;
+      left: 0% !important;
+      margin-bottom: 10px !important; }
+      .risk-form-page #progress .progress-bar {
+        background: #00c5c8; }
   .field-q1,
   .field-q2,
   .field-q3,
@@ -781,6 +789,13 @@ a[data-toggle='collapse'] {
     border: #00c5c8; }
     .risk-form-page .btn-primary:hover {
       background: #009395; }
+  .risk-form-page #progress {
+    width: 500px;
+    position: relative;
+    top: 0%;
+    left: 30%; }
+    .risk-form-page #progress .progress-bar {
+      background: #00c5c8; }
 
 #risk_form {
   position: relative; }

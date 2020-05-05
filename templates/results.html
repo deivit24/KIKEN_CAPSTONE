@@ -10,7 +10,30 @@
         </h1>
       </div>
       <div id="piechart" class="chart"></div>
-      <div id="fees"></div>
+
+      <div class="table" style="overflow-y: scroll;">
+        <div class="" id="fees"></div>
+        <table
+          id="dtBasicExample"
+          class="table table-hover table-striped table-sm"
+          cellspacing="0"
+          width="100%"
+        >
+          <thead>
+            <tr>
+              <th scope="col">Symbol</th>
+              <th scope="col">Name</th>
+              <th scope="col">Category</th>
+              <th scope="col">Expense</th>
+            </tr>
+          </thead>
+          <tbody id="portfolios">
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <div class="col-md-4">
       <div id="login">
@@ -25,7 +48,56 @@
           <button class="btn btn-primary btn-lg btn-block">Login!</button>
         </form>
         <h4 class="text-center">or</h4>
-        <a href="/signup" class="btn btn-lg btn-primary">Sign up</a>
+        <button
+          type="button"
+          class="btn btn-lg btn-primary"
+          data-toggle="modal"
+          data-target="#exampleModalCenter"
+        >
+          Save Portfolio
+        </button>
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="exampleModalCenter"
+          style="z-index: 500;"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalCenterTitle"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">
+                  Modal title
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form action="/save" method="POST" id="user-result-form">
+                  {{ user_form.hidden_tag() }} {% for field in user_form if
+                  field.widget.input_type != 'hidden' %} {% for error in
+                  field.errors %}
+                  <span class="text-danger">{{ error }}</span>
+                  {% endfor %} {{ field(placeholder=field.label.text,
+                  class="form-control") }} {% endfor %}
+
+                  <button class="btn btn-primary btn-lg btn-block">
+                    signup!
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="mt-5" id="benefits">
         <div>

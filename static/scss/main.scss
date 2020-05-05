@@ -404,10 +404,20 @@ a[data-toggle='collapse'] {
       background: darken($blue, $amount: 10);
     }
   }
+  #progress {
+    width: 500px;
+    position: relative;
+    top: 0%;
+    left: 30%;
+    .progress-bar {
+      background: $blue;
+    }
+  }
 }
 #risk_form {
   position: relative;
 }
+
 .field-q1,
 .field-q2,
 .field-q3,

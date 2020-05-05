@@ -84,6 +84,27 @@ class User(db.Model):
         return user
 
     @classmethod
+    def signup_risk(cls, first_name, last_name, username, email, password, image_url, risk_profile):
+        """Sign up user.
+        Hashes password and adds user to system.
+        """
+
+        hashed_pwd = bcrypt.generate_password_hash(password).decode('UTF-8')
+
+        user = User(
+            first_name=first_name,
+            last_name=last_name,
+            username=username,
+            email=email,
+            password=hashed_pwd,
+            image_url=image_url,
+            risk_profile=risk_profile
+        )
+
+        db.session.add(user)
+        return user
+
+    @classmethod
     def authenticate(cls, username, password):
         """Find user with `username` and `password`.
         This is a class method (call it on the class, not an individual user.)

@@ -7,7 +7,7 @@ from flask_debugtoolbar import DebugToolbarExtension
 from sqlalchemy.exc import IntegrityError, InvalidRequestError
 from functools import wraps
 from bs4 import BeautifulSoup
-from forms import UserAddForm, UserEditForm, LoginForm, EditPasswordForm, RiskProfile
+from forms import UserAddForm, UserEditForm, LoginForm, EditPasswordForm, RiskProfile, UserAddFormRisk
 from models import db, connect_db, User, Portfolios, ETFs
  
 
@@ -117,6 +117,42 @@ def signup():
         return render_template('users/signup.html', form=form)
 
 
+# signup with risk
+@app.route('/save', methods=["GET", "POST"])
+def save():
+    """Handle user signup.
+    Create new user and add to DB. Redirect to home page.
+    If form not valid, present form.
+    If the there already is a user with that username: flash message
+    and re-present form.
+    """
+
+    form = UserAddFormRisk()
+
+    if form.validate_on_submit():
+        try:
+            user = User.signup_risk(
+                first_name = form.first_name.data,
+                last_name=form.last_name.data,
+                username=form.username.data,
+                password=form.password.data,
+                email=form.email.data,
+                image_url=form.image_url.data or User.image_url.default.arg,
+                risk_profile = form.risk_profile.data,
+            )
+            db.session.commit()
+
+        except IntegrityError:
+            flash("Username already taken", 'danger')
+            return render_template('users/signup.html', form=form)
+        do_login(user)
+        flash(f"Welcome {user.username}!", "success")
+        return redirect("/")
+    else:
+        return render_template('users/signup.html', form=form)
+
+
+
 @app.route('/login', methods=["GET", "POST"])
 def login():
     """Handle user login."""
@@ -151,6 +187,7 @@ def new_risk_profile():
         flash("You have to logout to access this page", "warning")
         return redirect('/')
     form = RiskProfile()
+    user_form = UserAddFormRisk()
     login_form = LoginForm()
 
     if form.validate_on_submit():
@@ -178,11 +215,13 @@ def new_risk_profile():
         else:
             risk_profile = "All Equity"
         
-        return render_template('/results.html', risk_profile=risk_profile, form=login_form )
+        return render_template('results.html', risk_profile=risk_profile, form=login_form, user_form = user_form )
+        
     else:
         return render_template("risk-form.html", form=form)
 
-# Updating a risk profile
+
+
 @app.route('/update/risk-profile', methods=["GET", "POST"])
 @login_required
 def update_riskprofile():

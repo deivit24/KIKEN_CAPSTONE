@@ -6,6 +6,28 @@ This web application gauges the risk tolerance of individual investors and, base
 
 [This App is currently deployed on heroku](https://kiken.herokuapp.com/).
 
+## Tech Stack
+
+- Backend
+  - Python, Flask
+  - PostgreSQL, SQLAlchemy
+- Frontend
+  - HTML, CSS, SCSS
+  - JavaScript/jQuery
+  - Bootstrap 4
+- Deployment
+  - Gunicorn server
+  - Heroku Deployment Platform
+
+## The Data
+
+The ETF information was web scrapped using requests and BeatifulSoup from [ETF Analytic](https://etfdb.com/etfs/asset-class/#etfs__expenses&sort_name=assets_under_management&sort_order=desc&page=1) website.
+Here is the [code](https://github.com/deivit24/KIKEN_CAPSTONE/blob/master/generator/b4_test.py) I used to do so
+
+I used csv from writer to generate a csv file to create a database of ETFs that I need. My seed file created a database using DictReader
+
+Also, I used the to_dict() method and jsonify to create the [ETF API](https://kiken.herokuapp.com/api/etfs) as well as the Kiken Portfolio models. I used Flask-RESTful to create the [Compared Portfolio API](https://kiken.herokuapp.com/api/models). I decided to use Flask-Resful because it was easier to make changes to the API. I was making manual changes to a JSON dictionary and cross referencing the models to the company websites and model allocation whitepapers.
+
 ## The Problem
 
 Whenever someone wants to start investing, there are two kinds of individual investors: DIYs (Do It Yourselfers) and people that need financial advisors.
@@ -56,27 +78,3 @@ Kiken also has an interactive slider tool that changes a hypothetical investment
 6.  There is also a slider tool that you can use to change hypothetical investments and you can see the annual fees.
 
 7.  The side navbar has routes to updating your risk profile and your Kiken Profile (change username, email, password or deleting your profile).
-
-## The Data
-
-The ETF information was web scrapped using requests and BeatifulSoup from [ETF Analytic](https://etfdb.com/etfs/asset-class/#etfs__expenses&sort_name=assets_under_management&sort_order=desc&page=1) website.
-
-I used csv from writer to generate a csv file to create a database of ETFs that I need. My seed file created a database using DictReader:
-
-`with open('generator/etfs.csv') as etfs:`
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`db.session.bulk_insert_mappings(ETFs, DictReader(etfs))`
-
-Also, I used the to_dict() method and jsonify to create the [ETF API](https://kiken.herokuapp.com/api/etfs) as well as the Kiken Portfolio models. I used Flask-RESTful to create the [Compared Portfolio API](https://kiken.herokuapp.com/api/models). I decided to use Flask-Resful because it was easier to make changes to the API. I was making manual changes to a JSON dictionary and cross referencing the models to the company websites and model allocation whitepapers.
-
-## Tech Stack
-
-- Backend
-  - Python, Flask
-  - PostgreSQL, SQLAlchemy
-- Frontend
-  - HTML, CSS, SCSS
-  - JavaScript/jQuery
-  - Bootstrap 4
-- Deployment
-  - Gunicorn server
-  - Heroku Deployment Platform

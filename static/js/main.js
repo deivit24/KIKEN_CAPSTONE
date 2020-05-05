@@ -30,12 +30,20 @@ function show() {
   const arrows = document.querySelector('.fa-arrow-right');
   arrows.classList.add('show');
 }
-
+let num = 0;
 function nextQuestion(parent, nextForm, arrow) {
+  // progress bar
+  const progressBar = document.querySelector('.progress-bar');
+
+  const progress = document.querySelector('.progress');
+  num += 10;
+
   parent.classList.add('innactive');
   parent.classList.remove('active');
   nextForm.classList.add('active');
   arrow.parentNode.removeChild(arrow);
+  progressBar.style.width = num + '%';
+  progressBar.setAttribute('aria-valuenow', `${num}`);
 }
 
 animatedForm();
@@ -59,6 +67,15 @@ function generatePortfolios(portfolio) {
     }
   }
   let title = `KIKEN ${portfolio.name} ETF Allocation`;
+
+  let riskInput = document.getElementById('risk_profile');
+
+  if (riskInput) {
+    riskInput.value = portfolio.name;
+
+    riskInput.setAttribute('type', 'hidden');
+  }
+
   array.unshift(['ETF', 'Allocation']);
 
   google.load('visualization', '1', { packages: ['corechart'] });
@@ -209,6 +226,7 @@ noUiSlider.create(updateSlider, {
 function populate(res) {
   $('#fees').empty();
   let array = [];
+  console.log(array);
   for (let [key, value] of Object.entries(res)) {
     if (
       key != 'id' &&
@@ -222,7 +240,18 @@ function populate(res) {
     if (key == 'desc') {
       $('#desc').append(`<p>${value}</p>`);
     }
+    let a = document.getElementById('update');
     if (key == 'fees') {
+      $('#fees').append(`
+      
+      <h4 class="float-left">Average Portfolio Fee: </h4>
+      <h4 class="float-right" style="color:#00c5c8;"> ${(value * 100).toFixed(
+        2
+      )}%</h4>
+      
+      `);
+    }
+    if (key == 'fees' && a) {
       $('#fees').append(`
       
       <h4 class="float-left">Average Portfolio Fee: </h4>
@@ -243,6 +272,8 @@ function populate(res) {
       });
     }
   }
+  console.log(array);
+
   let users = [];
   let promises = [];
   for (i = 0; i < array.length; i++) {
@@ -316,7 +347,7 @@ function populateCompared(res) {
         })
     );
   }
-  // let table = document.getElementById('portfolios');
+  let table = document.getElementById('portfolios');
   Promise.all(promises).then(() => {
     $('#compair-portfolios').empty();
     for (i = 0; i < users.length; i++) {
